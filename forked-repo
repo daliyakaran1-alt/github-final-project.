@@ -1,9 +1,9 @@
 Command:
-$repo = curl.exe -sS https://api.github.com/repos/mayank1821-cloud/mcino-Introduction-to-Git-and-GitHub | ConvertFrom-Json; if ($repo.fork -ne $true -or $repo.parent.full_name -ne 'ibm-developer-skills-network/mcino-Introduction-to-Git-and-GitHub') { throw "Fork is not ready or parent mismatch (fork=$($repo.fork), parent=$($repo.parent.full_name))" }; [pscustomobject]@{ full_name = $repo.full_name; fork = $repo.fork; parent = $repo.parent.full_name } | ConvertTo-Json
+curl -sS https://api.github.com/repos/daliyakaran1-alt/mcino-Introduction-to-Git-and-GitHub
 
 Terminal output:
 {
-    "full_name":  "mayank1821-cloud/mcino-Introduction-to-Git-and-GitHub",
+    "full_name":  "daliyakaran1-alt/mcino-Introduction-to-Git-and-GitHub",
     "fork":  true,
     "parent":  "ibm-developer-skills-network/mcino-Introduction-to-Git-and-GitHub"
 }

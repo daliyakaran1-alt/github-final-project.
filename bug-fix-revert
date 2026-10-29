@@ -1,14 +1,13 @@
 Command:
-$pr = curl.exe -sS https://api.github.com/repos/ibm-developer-skills-network/mcino-Introduction-to-Git-and-GitHub/pulls/12103 | ConvertFrom-Json; if ($pr.number -ne 12103 -or $pr.head.repo.full_name -ne 'mayank1821-cloud/mcino-Introduction-to-Git-and-GitHub' -or $pr.base.repo.full_name -ne 'ibm-developer-skills-network/mcino-Introduction-to-Git-and-GitHub') { throw 'Pull request record or fork relationship did not validate' }; [pscustomobject]@{ number = $pr.number; state = $pr.state; merged = $pr.merged; html_url = $pr.html_url; head_repo = $pr.head.repo.full_name; head_branch = $pr.head.ref; base_repo = $pr.base.repo.full_name; base_branch = $pr.base.ref } | ConvertTo-Json
+curl -sS https://api.github.com/repos/ibm-developer-skills-network/mcino-Introduction-to-Git-and-GitHub/pulls/12144
 
 Terminal output:
 {
-    "number":  12103,
-    "state":  "closed",
-    "merged":  false,
-    "html_url":  "https://github.com/ibm-developer-skills-network/mcino-Introduction-to-Git-and-GitHub/pull/12103",
-    "head_repo":  "mayank1821-cloud/mcino-Introduction-to-Git-and-GitHub",
-    "head_branch":  "bug-fix-typo",
+    "number":  12144,
+    "state":  "open",
+    "html_url":  "https://github.com/ibm-developer-skills-network/mcino-Introduction-to-Git-and-GitHub/pull/12144",
+    "head_repo":  "daliyakaran1-alt/mcino-Introduction-to-Git-and-GitHub",
+    "head_branch":  "bug-fix-revert",
     "base_repo":  "ibm-developer-skills-network/mcino-Introduction-to-Git-and-GitHub",
     "base_branch":  "main"
 }
